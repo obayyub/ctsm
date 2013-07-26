@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726004959) do
+ActiveRecord::Schema.define(:version => 20130726214244) do
 
   create_table "refinery_articles", :force => true do |t|
     t.string   "title"
@@ -139,6 +139,18 @@ ActiveRecord::Schema.define(:version => 20130726004959) do
   create_table "refinery_projects", :force => true do |t|
     t.string   "title"
     t.text     "content"
+    t.integer  "picture_id"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "refinery_publications", :force => true do |t|
+    t.string   "category"
+    t.string   "authors"
+    t.string   "title"
+    t.string   "content"
+    t.integer  "pdf_id"
     t.integer  "picture_id"
     t.integer  "position"
     t.datetime "created_at", :null => false

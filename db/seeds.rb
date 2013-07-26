@@ -9,18 +9,6 @@
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed
 
-# Added by Refinery CMS Textbooks extension
-Refinery::Textbooks::Engine.load_seed
-
-# Added by Refinery CMS Journals extension
-Refinery::Journals::Engine.load_seed
-
-# Added by Refinery CMS Conferences extension
-Refinery::Conferences::Engine.load_seed
-
-# Added by Refinery CMS Reports extension
-Refinery::Reports::Engine.load_seed
-
 # Added by Refinery CMS Courses extension
 Refinery::Courses::Engine.load_seed
 
@@ -32,3 +20,6 @@ Refinery::Articles::Engine.load_seed
 
 # Added by Refinery CMS People extension
 Refinery::People::Engine.load_seed
+
+# Added by Refinery CMS Publications extension
+Refinery::Publications::Engine.load_seed
