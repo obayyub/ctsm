@@ -1,0 +1,27 @@
+body {
+  background: #FFF;
+}
+
+.ctsmheader {
+  background-image: image-url("header-pattern.jpg");
+  padding-bottom: 2em;
+}
+
+.pure-menu.pure-menu-open.pure-menu-horizontal {
+background: rgb(27,89,128); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(27,89,128,1) 0%, rgba(3,65,102,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,89,128,1)), color-stop(100%,rgba(3,65,102,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b5980', endColorstr='#034166',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+.ctsmfooter {
+  background: #206898;
+  padding-bottom: 3em;
+  padding-top: 3em;
+}
