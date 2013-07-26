@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      journals:
+        title: Journals
+    journals:
+      admin:
+        journals:
+          actions:
+            create_new: Lag en ny Journal
+            reorder: Endre rekkefølgen på Journals
+            reorder_done: Ferdig å endre rekkefølgen Journals
+          records:
+            title: Journals
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Journals enda. Klikk på "Lag en ny Journal" for å legge til din første journal.
+          journal:
+            view_live_html: Vis hvordan denne journal ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne journal
+            delete: Fjern denne journal permanent
+      journals:
+        show:
+          other: Andre Journals
+  activerecord:
+    attributes:
+      'refinery/journals/journal':
+        authors: Authors
+        title: Title
+        content: Content
+        pdf: Pdf

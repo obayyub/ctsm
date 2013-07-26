@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      textbooks:
+        title: Textbooks
+    textbooks:
+      admin:
+        textbooks:
+          actions:
+            create_new: Add New Textbook
+            reorder: Reorder Textbooks
+            reorder_done: Done Reordering Textbooks
+          records:
+            title: Textbooks
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Textbooks yet. Click "Add New Textbook" to add your first textbook.
+          textbook:
+            view_live_html: View this textbook live <br/><em>(opens in a new window)</em>
+            edit: Edit this textbook
+            delete: Remove this textbook forever
+      textbooks:
+        show:
+          other: Other Textbooks
+  activerecord:
+    attributes:
+      'refinery/textbooks/textbook':
+        authors: Authors
+        title: Title
+        state: State
+        picture: Picture

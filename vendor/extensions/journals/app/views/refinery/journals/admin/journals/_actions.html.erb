@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Journals::Admin::JournalsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.journals_admin_journals_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_journals_admin_journal_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Journals::Admin::JournalsController.sortable? && ::Refinery::Journals::Journal.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Journals"),
+                 refinery.journals_admin_journals_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Journals"),
+                 refinery.journals_admin_journals_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

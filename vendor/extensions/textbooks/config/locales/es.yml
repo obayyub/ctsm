@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      textbooks:
+        title: Textbooks
+#        article: masculino/femenino
+    textbooks:
+      admin:
+        textbooks:
+          actions:
+            create_new: Crear nuevo textbook
+            reorder: Reordenar textbooks
+            reorder_done: Reordenación de textbooks completada
+          records:
+            title: Textbooks
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay textbooks todavía. Pulsa en "Crear nuevo Textbook" para crear tu primer textbook.
+          textbook:
+            view_live_html: Ver este textbook como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este textbook
+            delete: Borrar este textbook para siempre
+      textbooks:
+        show:
+          other: Otros textbooks
+  activerecord:
+    attributes:
+      'refinery/textbooks/textbook':
+        authors: Authors
+        title: Title
+        state: State
+        picture: Picture

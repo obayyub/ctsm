@@ -1,0 +1,30 @@
+<% content_for :body do %>
+  <h1>People</h1>
+  	<h1>Directors</h1>
+    <% @directors.each do |person| %>
+      <li>
+        <%= person.name %>
+      </li>
+    <% end %>
+    <h1>Associates</h1>
+    <% @associates.each do |person| %>
+      <li>
+        <%= person.name %>
+      </li>
+    <% end %>
+    <h1>Graduates</h1>
+    <% @graduates.each do |person| %>
+      <li>
+        <%= person.name %>
+      </li>
+    <% end %>
+    <h1>Undergraduates</h1>
+    <% @undergraduates.each do |person| %>
+      <li>
+        <%= person.name %>
+      </li>
+    <% end %>
+<% end %>
+
+
+<%= render '/refinery/content_page' %>

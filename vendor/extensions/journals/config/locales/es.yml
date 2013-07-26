@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      journals:
+        title: Journals
+#        article: masculino/femenino
+    journals:
+      admin:
+        journals:
+          actions:
+            create_new: Crear nuevo journal
+            reorder: Reordenar journals
+            reorder_done: Reordenación de journals completada
+          records:
+            title: Journals
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay journals todavía. Pulsa en "Crear nuevo Journal" para crear tu primer journal.
+          journal:
+            view_live_html: Ver este journal como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este journal
+            delete: Borrar este journal para siempre
+      journals:
+        show:
+          other: Otros journals
+  activerecord:
+    attributes:
+      'refinery/journals/journal':
+        authors: Authors
+        title: Title
+        content: Content
+        pdf: Pdf

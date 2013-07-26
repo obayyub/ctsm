@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      textbooks:
+        title: Textbooks
+    textbooks:
+      admin:
+        textbooks:
+          actions:
+            create_new: Pridať Textbook
+            reorder: Preusporiadať Textbooks
+            reorder_done: Koniec radenia Textbooks
+          records:
+            title: Textbooks
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Textbooks. Kliknite na "Pridať Textbook" pre pridanie prvého textbook.
+          textbook:
+            view_live_html: Zobraziť náhľad textbook<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť textbook
+            delete: Zmazať textbook
+      textbooks:
+        show:
+          other: Daľšie Textbooks
+  activerecord:
+    attributes:
+      'refinery/textbooks/textbook':
+        authors: Authors
+        title: Title
+        state: State
+        picture: Picture

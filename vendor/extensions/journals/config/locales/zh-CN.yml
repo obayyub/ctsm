@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      journals:
+        title: Journals
+    journals:
+      admin:
+        journals:
+          actions:
+            create_new: 建立新的 Journal
+            reorder: 对 Journals 重新排序
+            reorder_done: 对 Journals 的重新排序结束
+          records:
+            title: Journals
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Journals yet. Click "Add New Journal" to add your first journal.
+            no_items_yet: 目前没有 Journals . 点击 "Add New Journal" 创建一个journal.
+          journal:
+            view_live_html: 查看 journal 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 journal
+            delete: 永久删除 journal
+      journals:
+        show:
+          other: 其他 Journals
+  activerecord:
+    attributes:
+      'refinery/journals/journal':
+        authors: Authors
+        title: Title
+        content: Content
+        pdf: Pdf

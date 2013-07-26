@@ -1,0 +1,58 @@
+<% content_for :body_content_title do %>
+  <%= @person.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @person.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @person.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Phone</h1>
+    <p>
+      <%=raw @person.phone %>
+    </p>
+  </section>
+  <section>
+    <h1>Email</h1>
+    <p>
+      <%=raw @person.email %>
+    </p>
+  </section>
+  <section>
+    <h1>Category</h1>
+    <p>
+      <%=raw @person.category %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%= image_fu @person.photo, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="people">
+      <% @people.each do |person| %>
+        <li>
+          <%= link_to person.name, refinery.people_person_path(person) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+<div ng-controller='PersonnelCtrl'></div>
+
+<%= render '/refinery/content_page' %>

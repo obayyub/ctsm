@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="textbooks">
+    <% @textbooks.each do |textbook| %>
+      <li>
+        <%= link_to textbook.authors, refinery.textbooks_textbook_path(textbook) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>
