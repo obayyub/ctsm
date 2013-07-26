@@ -1,30 +1,58 @@
-<% content_for :body do %>
-  <h1>People</h1>
-  	<h1>Directors</h1>
-    <% @directors.each do |person| %>
-      <li>
-        <%= person.name %>
-      </li>
-    <% end %>
-    <h1>Associates</h1>
-    <% @associates.each do |person| %>
-      <li>
-        <%= person.name %>
-      </li>
-    <% end %>
-    <h1>Graduates</h1>
-    <% @graduates.each do |person| %>
-      <li>
-        <%= person.name %>
-      </li>
-    <% end %>
-    <h1>Undergraduates</h1>
-    <% @undergraduates.each do |person| %>
-      <li>
-        <%= person.name %>
-      </li>
-    <% end %>
-<% end %>
+<div class='pure-g-r'>
+	<div class='pure-u-1-5'>
+	</div>
+	<div class='pure-u-2-3'>
+	<h1>People</h1>
+	<h1>Directors</h1>
+	<div class='pure-g-r'>
+  <% @directors.each do |person| %>
+  		<div class='pure-u-1-5'>
+	     	<div><%= image_fu person.photo, '100x' %></div>
+	      <div><%= person.name %></div>
+	      <div><%= person.title %></div>
+	      <div><%= person.email %></div>
+	      <div><%= person.phone %></div>
+      </div>
+  <% end %>
+  </div>
+  <h1>Associates</h1>
+  <div class='pure-g-r'>
+  <% @associates.each do |person| %>
+    <div class='pure-u-1-5'>
+	     	<div><%= image_fu person.photo, '100x' %></div>
+	      <div><%= person.name %></div>
+	      <div><%= person.title %></div>
+	      <div><%= person.email %></div>
+	      <div><%= person.phone %></div>
+      </div>
+  <% end %>
+  </div>
+  <h1>Graduate Students</h1>
+  <div class='pure-g-r'>
+  <% @graduates.each do |person| %>
+    <div class='pure-u-1-5'>
+	     	<div><%= image_fu person.photo, '100x' %></div>
+	      <div><%= person.name %></div>
+	      <div><%= person.title %></div>
+	      <div><%= person.email %></div>
+	      <div><%= person.phone %></div>
+      </div>
+  <% end %>
+  </div>
+  <h1>Undergraduate Students</h1>
+  <div class='pure-g-r'>
+  <% @undergraduates.each do |person| %>
+    <div class='pure-u-1-5'>
+	     	<div><%= image_fu person.photo, '100x' %></div>
+	      <div><%= person.name %></div>
+	      <div><%= person.title %></div>
+	      <div><%= person.email %></div>
+	      <div><%= person.phone %></div>
+      </div>
+  <% end %>
+  </div>
+  </div>
+  <div class='pure-u-1-5'>
+  </div>
+</div>
 
-
-<%= render '/refinery/content_page' %>

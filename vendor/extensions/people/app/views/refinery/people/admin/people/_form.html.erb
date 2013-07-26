@@ -25,7 +25,11 @@
 
   <div class='field'>
     <%= f.label :category -%>
-    <%= f.text_field :category -%>
+    <%= f.select :category, [
+      'Directors',
+      'Associates',
+      'Graduate Students',
+      'Undergraduate Students'], selected: 'Directors' %>
   </div>
 
   <div class='field'>
