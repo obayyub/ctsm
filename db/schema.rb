@@ -22,15 +22,6 @@ ActiveRecord::Schema.define(:version => 20130726214244) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "refinery_conferences", :force => true do |t|
-    t.string   "author"
-    t.string   "title"
-    t.string   "content"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "refinery_courses", :force => true do |t|
     t.string   "title"
     t.string   "content"
@@ -50,16 +41,6 @@ ActiveRecord::Schema.define(:version => 20130726214244) do
     t.string   "image_ext"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-  end
-
-  create_table "refinery_journals", :force => true do |t|
-    t.string   "authors"
-    t.string   "title"
-    t.string   "content"
-    t.integer  "pdf_id"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|
@@ -157,16 +138,6 @@ ActiveRecord::Schema.define(:version => 20130726214244) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "refinery_reports", :force => true do |t|
-    t.string   "authors"
-    t.string   "title"
-    t.string   "content"
-    t.integer  "pdf_id"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "refinery_resources", :force => true do |t|
     t.string   "file_mime_type"
     t.string   "file_name"
@@ -188,16 +159,6 @@ ActiveRecord::Schema.define(:version => 20130726214244) do
 
   add_index "refinery_roles_users", ["role_id", "user_id"], :name => "index_refinery_roles_users_on_role_id_and_user_id"
   add_index "refinery_roles_users", ["user_id", "role_id"], :name => "index_refinery_roles_users_on_user_id_and_role_id"
-
-  create_table "refinery_textbooks", :force => true do |t|
-    t.string   "authors"
-    t.string   "title"
-    t.string   "state"
-    t.integer  "picture_id"
-    t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
