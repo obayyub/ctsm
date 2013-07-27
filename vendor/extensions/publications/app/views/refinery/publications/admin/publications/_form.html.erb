@@ -4,11 +4,6 @@
               :include_object_name => true %>
 
   <div class='field'>
-    <%= f.label :category -%>
-    <%= f.text_field :category, :class => 'larger widest' -%>
-  </div>
-
-  <div class='field'>
     <%= f.label :authors -%>
     <%= f.text_field :authors -%>
   </div>
@@ -21,6 +16,11 @@
   <div class='field'>
     <%= f.label :content -%>
     <%= f.text_field :content -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :category -%>
+    <%= f.select :category, ['Journals', 'Textbooks', 'Conferences', 'Technical Reports'], selected: 'Journals' -%>
   </div>
 
   <div class='field'>

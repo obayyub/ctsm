@@ -3,11 +3,11 @@ module Refinery
     class Publication < Refinery::Core::BaseModel
       self.table_name = 'refinery_publications'
 
-      attr_accessible :category, :authors, :title, :content, :pdf_id, :picture_id, :position
+      attr_accessible :authors, :category, :title, :content, :pdf_id, :picture_id, :position
 
-      acts_as_indexed :fields => [:category, :authors, :title, :content]
+      acts_as_indexed :fields => [:authors, :category, :title, :content]
 
-      validates :category, :presence => true, :uniqueness => true
+      validates :title, :presence => true, :uniqueness => true
 
       belongs_to :picture, :class_name => '::Refinery::Image'
 

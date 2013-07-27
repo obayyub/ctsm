@@ -1,11 +1,74 @@
-<% content_for :body do %>
-  <ul id="publications">
-    <% @publications.each do |publication| %>
-      <li>
-        <%= link_to publication.category, refinery.publications_publication_path(publication) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<div class='pure-g-r' ng-controller='PublicationCtrl'>
+	<div class='pure-u-1-5'>
+	</div>
+	<div class='pure-u-2-3' ng-switch on='selection'>
+	<div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <ul>
+        <li ng-click="switchView('journal')"><a href='#'>Journals</a></li>
+        <li ng-click="switchView('conference')"><a href='#'>Conferences</a></li>
+        <li ng-click="switchView('textbooks')"><a href='#'>Textbooks</a></li>
+        <li ng-click="switchView('reports')"><a href='#'>Technical Reports</a></li>
+    </ul>
+	</div>
+	<div class='pure-g-r' ng-switch-when='journal'>
+	<h1>Journal Articles</h1>
+  <% @journals.each do |pub| %>
+  		<div class='pure-u-2-3'>
+	     	<div><%= image_fu pub.picture, '100x' %></div>
+	      <div><%= pub.authors %></div>
+	      <div><%= pub.title %></div>
+	      <div><%= pub.content %></div>
+	      <% if pub.pdf.present? %>
+        	<%= link_to 'pdf', pub.pdf.url %>
+      	<% end %>
+      </div>
+  <% end %>
+  </div>
+	<div class='pure-g-r' ng-switch-when='conference'>
+	<h1>Conferences</h1>
+  <% @conferences.each do |pub| %>
+  		<div class='pure-u-2-3'>
+	     	<div><%= image_fu pub.picture, '100x' %></div>
+	      <div><%= pub.authors %></div>
+	      <div><%= pub.title %></div>
+	      <div><%= pub.content %></div>
+	      <% if pub.pdf.present? %>
+        	<%= link_to 'pdf', pub.pdf.url %>
+      	<% end %>
+      </div>
+  <% end %>
+  </div>
+	<div class='pure-g-r' ng-switch-when='textbooks'>
+	<h1>Textbooks</h1>
+  <% @textbooks.each do |pub| %>
+  		<div class='pure-u-2-3'>
+	     	<div><%= image_fu pub.picture, '100x' %></div>
+	      <div><%= pub.authors %></div>
+	      <div><%= pub.title %></div>
+	      <div><%= pub.content %></div>
+	      <% if pub.pdf.present? %>
+        	<%= link_to 'pdf', pub.pdf.url %>
+      	<% end %>
+      </div>
+  <% end %>
+  </div>
+	<div class='pure-g-r' ng-switch-when='reports'>
+	<h1>Technical Reports</h1>
+  <% @reports.each do |pub| %>
+  		<div class='pure-u-2-3'>
+	     	<div><%= image_fu pub.picture, '100x' %></div>
+	      <div><%= pub.authors %></div>
+	      <div><%= pub.title %></div>
+	      <div><%= pub.content %></div>
+	      <% if pub.pdf.present? %>
+        	<%= link_to 'pdf', pub.pdf.url %>
+      	<% end %>
+      </div>
+  <% end %>
+  </div>
+  </div>
+  <div class='pure-u-1-5'>
+  </div>
+</div>
 
-<%= render '/refinery/content_page' %>
+

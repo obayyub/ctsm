@@ -6,6 +6,11 @@ module Refinery
       before_filter :find_page
 
       def index
+        @publications = Publication.all
+        @journals = Publication.where(category: 'Journals')
+        @textbooks = Publication.where(category: 'Textbooks')
+        @conferences = Publication.where(category: 'Conferences')
+        @reports = Publication.where(category: 'Technical Reports')
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @publication in the line below:
         present(@page)
