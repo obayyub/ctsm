@@ -4,7 +4,7 @@ body {
 
 .ctsmheader {
   background-image: image-url("header-pattern.jpg");
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 .pure-menu.pure-menu-open.pure-menu-horizontal {
@@ -37,6 +37,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b5980', end
   text-decoration: none;
   font-size: 1em;
   font-weight:600;
+}
+
+.ctsmfeed a:visited {
+    color: #555;
 }
 
 .ctsmfeed {
