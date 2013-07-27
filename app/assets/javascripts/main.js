@@ -11,7 +11,6 @@ app.factory('Feed', ['$http', function ($http) {
 var FeedCtrl = function($scope, Feed) {
 	Feed.parseFeed('http://feed.eng.umd.edu/news/feed.xml').then(function (res) {
       $scope.feeds = res.data.responseData.feed.entries;
-      console.log($scope.feeds);
    });
 }
 

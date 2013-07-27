@@ -1,1 +1,11 @@
-<%= render '/refinery/content_page' %>
+<div class='pure-g-r'>
+	<div class='pure-u-1-12'>
+	</div>
+	<div class='pure-u-1-2'>
+		<%= render '/refinery/content_page' %>
+	</div>
+	<div ng-controller='FeedCtrl' class='pure-u-1-4'>
+		<h3>Engineering News</h3>
+		<div ng-repeat='feed in feeds'><a href='{{feed.link}}'>{{feed.title}}</a></div>
+	</div>
+</div>
