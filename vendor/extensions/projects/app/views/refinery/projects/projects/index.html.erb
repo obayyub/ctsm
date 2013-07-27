@@ -1,11 +1,15 @@
-<% content_for :body do %>
-  <ul id="projects">
-    <% @projects.each do |project| %>
-      <li>
-        <%= link_to project.title, refinery.projects_project_path(project) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render '/refinery/content_page' %>
+<div ng-switch on='select' ng-init="select = '<%= @projects.first.title %>'">
+	<div class="pure-menu pure-menu-open pure-menu-horizontal">
+		<% @projects.each do |f| %>
+			<ul>
+				<li ng-click="select = '<%= f.title.to_s %>'"><a href='#'><%= f.title%></a></li>
+			</ul>
+		<% end %>
+	</div>
+	<% @projects.each do |project| %>
+	  <div ng-switch-when='<%= project.title.to_s %>'>
+	  	<%= project.title %>
+	  	<%=raw project.content %>
+	  </div>
+	<% end %>
+</div>

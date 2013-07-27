@@ -10,6 +10,10 @@ module Refinery
       validates :title, :presence => true, :uniqueness => true
 
       belongs_to :picture, :class_name => '::Refinery::Image'
+
+      def project_count
+      	Project.all.length
+      end
     end
   end
 end
