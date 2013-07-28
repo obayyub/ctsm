@@ -3,6 +3,11 @@
   <% site_bar = render('/refinery/site_bar', :head => true) -%>
   <%= render '/refinery/head' %>
   <body ng-app='ctsm'>
+  <div class="pure-g-r">
+  <div class="pure-u-1">
+  <div class="ctsmsite">
+
+
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
     <div id="page_container">
@@ -17,5 +22,8 @@
       </footer>
     </div>
     <%= render '/refinery/javascripts' %>
+      </div>
+    </div>
+      </div>
   </body>
 </html>

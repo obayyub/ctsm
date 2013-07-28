@@ -1,5 +1,11 @@
 body {
-  background: #FFF;
+  background: #ccc;
+}
+
+.ctsmsite {
+  max-width: 960px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .ctsmheader {
@@ -47,9 +53,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b5980', end
 }
 
 .ctsmfeed {
-    padding-left: 1em;
-    padding-right: 1em;
-
+  margin-left: -0.5em;
+  font-size: 0.8em;
+  margin-right: 1.3em;
 }
 
 .ctsmfeed hr {
@@ -62,6 +68,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b5980', end
 #page {
   background: #f6f3ee;
   margin-top: 0.5em;
-  font-size: 0.8em;
   padding-bottom: 2em;
+  margin-bottom: 0.5em;
+}
+
+.ctsmpage {
+  font-size: 0.9em;
+  margin-left: 1.3em;
 }
