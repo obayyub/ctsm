@@ -6,9 +6,14 @@ module Refinery
       before_filter :find_page
 
       def index
+        @article = Article.all
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @article in the line below:
         present(@page)
+        respond_to do |format|
+          format.html
+          format.json { render json: @article }
+        end
       end
 
       def show

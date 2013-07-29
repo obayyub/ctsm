@@ -1,13 +1,21 @@
 <div class='pure-g-r'>
 	<div class='pure-u-3-4'>
-    <div class="ctsmpage">
-		<%= render '/refinery/content_page' %>
-    </div>
+    <div ng-controller='ArticlesCtrl'>
+    	<div class='ctsmpage'>
+	    	<h1>CTSM News</h1>
+	    	<div ng-repeat='article in articles'>
+	    		<div class='ctsmnews'><a href='{{article.link}}'>{{article.title}}</a></div>
+	    		<div ng-bind-html-unsafe="article.content"></div><hr>
+	    	</div>
+	    </div>
+	</div>
 	</div>
 	<div ng-controller='FeedCtrl' class='pure-u-1-4'>
-  <div class="ctsmfeed">
-		<h3>Engineering News</h3>
-		<div ng-repeat='feed in feeds'><a href='{{feed.link}}'>{{feed.title}}</a><hr></div>
+	  <div class="ctsmfeed">
+			<h3>Engineering News</h3>
+			<div ng-repeat='feed in feeds'>
+				<a href='{{feed.link}}'>{{feed.title}}</a><hr>
+			</div>
+		</div>
 	</div>
-</div>
-</div>
+	</div>
