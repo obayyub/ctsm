@@ -1,4 +1,4 @@
-var app = angular.module('ctsm', []);
+var app = angular.module('ctsm', ['ngResource']);
 
 app.factory('Feed', ['$http', function ($http) {
     return {
@@ -7,6 +7,10 @@ app.factory('Feed', ['$http', function ($http) {
         }
     }
 }]);
+
+app.factory('Articles', function($resource) {
+  return $resource("/articles/:id", {id: "@id"}, {update: {method: "PUT"}});
+});
 
 var FeedCtrl = function($scope, Feed) {
 	Feed.parseFeed('http://feed.eng.umd.edu/news/feed.xml').then(function (res) {
@@ -20,3 +24,9 @@ var PublicationCtrl = function($scope) {
 		$scope.selection = whichView;
 	}
 };
+
+var ArticlesCtrl = function($scope, Articles) {
+  articles = Articles.query(function() {
+    $scope.articles = articles;
+  });
+}
