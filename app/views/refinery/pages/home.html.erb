@@ -5,7 +5,9 @@
 	    	<h1>CTSM News</h1>
 	    	<div ng-repeat='article in articles'>
 	    		<div class='ctsmnews'><a href='{{article.link}}'>{{article.title}}</a></div>
-	    		<div ng-bind-html-unsafe="article.content"></div><hr>
+	    		<div ng-bind-html-unsafe="article.content"></div>
+	    		<div class="share-buttons"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ctsmtest.com" data-text="ctsmtesttitle" data-via="marcus_orochena">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><hr>
 	    	</div>
 	    </div>
 	</div>

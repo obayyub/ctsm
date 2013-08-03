@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726214244) do
+ActiveRecord::Schema.define(:version => 20130802154602) do
 
   create_table "refinery_articles", :force => true do |t|
     t.string   "title"

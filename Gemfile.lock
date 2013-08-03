@@ -193,6 +193,8 @@ GEM
     refinerycms-i18n (2.0.2)
       refinerycms-core (~> 2.0.0)
       routing-filter (>= 0.2.3)
+    refinerycms-search (2.0.0)
+      refinerycms-core (~> 2.0.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     routing-filter (0.3.1)
@@ -243,6 +245,7 @@ DEPENDENCIES
   refinerycms-people!
   refinerycms-projects!
   refinerycms-publications!
+  refinerycms-search (~> 2.0.0)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

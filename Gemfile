@@ -63,3 +63,5 @@ gem 'refinerycms-courses', :path => 'vendor/extensions'
 gem 'refinerycms-projects', :path => 'vendor/extensions'
 gem 'refinerycms-articles', :path => 'vendor/extensions'
 gem 'refinerycms-publications', :path => 'vendor/extensions'
+
+gem 'refinerycms-search', '~> 2.0.0'
