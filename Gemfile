@@ -65,3 +65,5 @@ gem 'refinerycms-articles', :path => 'vendor/extensions'
 gem 'refinerycms-publications', :path => 'vendor/extensions'
 
 gem 'refinerycms-search', '~> 2.0.0'
+
+gem 'refinerycms-carousels', :path => 'vendor/extensions'

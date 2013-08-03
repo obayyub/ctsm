@@ -1,0 +1,23 @@
+<style>
+#slider-code { height: 325px; overflow:hidden; }
+#slider-code .viewport { float: left; width: 240px; height: 325px; overflow: hidden; position: relative; }
+#slider-code .buttons { display: block; margin: 30px 10px 0 0; float: left; }
+#slider-code .next { margin: 30px 0 0 10px;  }
+#slider-code .disable { visibility: hidden; }
+#slider-code .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+#slider-code .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 321px; border: 1px solid #dcdcdc; width: 236px;}
+</style>
+<div id="slider-code">
+	<a class="buttons prev" href="#">left</a>
+		<div class="viewport">
+			<ul class="overview">
+				<% @carousels.each do |carousel| %>
+      		<li>
+        		<%= image_fu carousel.picture, nil %>
+      		</li>
+    		<% end %>
+      </ul>
+		</div>
+	<a class="buttons next" href="#">right</a>
+</div>
+

@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      carousels:
+        title: Carousels
+    carousels:
+      admin:
+        carousels:
+          actions:
+            create_new: 建立新的 Carousel
+            reorder: 对 Carousels 重新排序
+            reorder_done: 对 Carousels 的重新排序结束
+          records:
+            title: Carousels
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Carousels yet. Click "Add New Carousel" to add your first carousel.
+            no_items_yet: 目前没有 Carousels . 点击 "Add New Carousel" 创建一个carousel.
+          carousel:
+            view_live_html: 查看 carousel 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 carousel
+            delete: 永久删除 carousel
+      carousels:
+        show:
+          other: 其他 Carousels
+  activerecord:
+    attributes:
+      'refinery/carousels/carousel':
+        title: Title
+        description: Description
+        picture: Picture

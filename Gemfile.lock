@@ -48,6 +48,8 @@ PATH
   specs:
     refinerycms-articles (1.0)
       refinerycms-core (~> 2.0.10)
+    refinerycms-carousels (1.0)
+      refinerycms-core (~> 2.0.10)
     refinerycms-courses (1.0)
       refinerycms-core (~> 2.0.10)
     refinerycms-people (1.0)
@@ -240,6 +242,7 @@ DEPENDENCIES
   rails (= 3.2.13)
   refinerycms (~> 2.0.0)!
   refinerycms-articles!
+  refinerycms-carousels!
   refinerycms-courses!
   refinerycms-i18n (~> 2.0.0)
   refinerycms-people!
