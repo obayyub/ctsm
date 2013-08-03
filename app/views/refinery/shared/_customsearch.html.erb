@@ -1,0 +1,6 @@
+<div class='pure-form'><%= form_tag refinery.search_path do -%>
+  <%= text_field_tag :query, {}, {:type => "search",
+                     :placeholder => "Search site for...",
+                     :value => (params[:query] if params[:query])} %>
+  <%= submit_tag 'Go', :class => "pure-button" %>
+<% end %></div>
