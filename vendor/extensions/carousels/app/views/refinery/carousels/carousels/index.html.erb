@@ -1,23 +1,48 @@
 <style>
-#slider-code { height: 325px; overflow:hidden; }
-#slider-code .viewport { float: left; width: 240px; height: 325px; overflow: hidden; position: relative; }
+#slider-code { height: 300px; overflow:hidden; }
+#slider-code .viewport { float: left; width: 600px; height: 300px; overflow: hidden; position: relative; }
 #slider-code .buttons { display: block; margin: 30px 10px 0 0; float: left; }
 #slider-code .next { margin: 30px 0 0 10px;  }
 #slider-code .disable { visibility: hidden; }
 #slider-code .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
-#slider-code .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 321px; border: 1px solid #dcdcdc; width: 236px;}
+#slider-code .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 300px; border: 1px solid #dcdcdc; width: 600px;}
 </style>
-<div id="slider-code">
-	<a class="buttons prev" href="#">left</a>
-		<div class="viewport">
-			<ul class="overview">
-				<% @carousels.each do |carousel| %>
-      		<li>
-        		<%= image_fu carousel.picture, nil %>
-      		</li>
-    		<% end %>
-      </ul>
+<div class='pure-g-r'>
+	<div class='pure-u-3-4'>
+    <div ng-controller='ArticlesCtrl'>
+    	<div class='ctsmpage'>
+	    	<div id="slider-code">
+					<a class="buttons prev" href="#">left</a>
+						<div class="viewport">
+							<ul class="overview">
+								<% @carousels.each do |carousel| %>
+								<center>
+				      		<li>
+				        		<%= image_fu carousel.picture, nil %>
+				      		</li>
+				      		</center>
+				    		<% end %>
+				      </ul>
+						</div>
+					<a class="buttons next" href="#">right</a>
+				</div>
+				<h1>CTSM News</h1>
+	    	<div ng-repeat='article in articles'>
+	    		<div class='ctsmnews'><a href='{{article.link}}'>{{article.title}}</a></div>
+	    		<div ng-bind-html-unsafe="article.content"></div>
+	    		<div class="share-buttons"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ctsmtest.com" data-text="ctsmtesttitle" data-via="marcus_orochena">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><hr>
+	    	</div>
+	    </div>
+	</div>
+	</div>
+	<div ng-controller='FeedCtrl' class='pure-u-1-4'>
+	  <div class="ctsmfeed">
+			<h3>Engineering News</h3>
+			<div ng-repeat='feed in feeds'>
+				<a href='{{feed.link}}'>{{feed.title}}</a><hr>
+			</div>
 		</div>
-	<a class="buttons next" href="#">right</a>
+	</div>
 </div>
 
