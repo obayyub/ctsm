@@ -12,7 +12,7 @@ font-family: 'Arimo', sans-serif;
 }
 
 .ctsmheader {
-  background-image: image-url("header-pattern.jpg");
+  background: image-url('naval_ship.png') right bottom no-repeat, image-url("header-pattern.jpg");
   padding-bottom: 1em;
 }
 
@@ -55,6 +55,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b5980', end
   color: #fff;
   line-height: .3em;
   font-size: 0.8em;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  font-weight: 400;
 }
 
 .ctsmfeed a:link {
