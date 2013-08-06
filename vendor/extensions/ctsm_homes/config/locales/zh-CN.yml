@@ -1,0 +1,31 @@
+zh-CN:
+  refinery:
+    plugins:
+      ctsm_homes:
+        title: Ctsm Homes
+    ctsm_homes:
+      admin:
+        ctsm_homes:
+          actions:
+            create_new: 建立新的 Ctsm Home
+            reorder: 对 Ctsm Homes 重新排序
+            reorder_done: 对 Ctsm Homes 的重新排序结束
+          records:
+            title: Ctsm Homes
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Ctsm Homes yet. Click "Add New Ctsm Home" to add your first ctsm home.
+            no_items_yet: 目前没有 Ctsm Homes . 点击 "Add New Ctsm Home" 创建一个ctsm home.
+          ctsm_home:
+            view_live_html: 查看 ctsm home 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 ctsm home
+            delete: 永久删除 ctsm home
+      ctsm_homes:
+        show:
+          other: 其他 Ctsm Homes
+  activerecord:
+    attributes:
+      'refinery/ctsm_homes/ctsm_home':
+        title: Title
+        description: Description
+        picture: Picture

@@ -1,0 +1,39 @@
+<% content_for :body_content_title do %>
+  <%= @ctsm_home.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @ctsm_home.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @ctsm_home.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Picture</h1>
+    <p>
+      <%= image_fu @ctsm_home.picture, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="ctsm_homes">
+      <% @ctsm_homes.each do |ctsm_home| %>
+        <li>
+          <%= link_to ctsm_home.title, refinery.ctsm_homes_ctsm_home_path(ctsm_home) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

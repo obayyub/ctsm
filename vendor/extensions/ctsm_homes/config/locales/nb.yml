@@ -1,0 +1,29 @@
+nb:
+  refinery:
+    plugins:
+      ctsm_homes:
+        title: Ctsm Homes
+    ctsm_homes:
+      admin:
+        ctsm_homes:
+          actions:
+            create_new: Lag en ny Ctsm Home
+            reorder: Endre rekkefølgen på Ctsm Homes
+            reorder_done: Ferdig å endre rekkefølgen Ctsm Homes
+          records:
+            title: Ctsm Homes
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Ctsm Homes enda. Klikk på "Lag en ny Ctsm Home" for å legge til din første ctsm home.
+          ctsm_home:
+            view_live_html: Vis hvordan denne ctsm home ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne ctsm home
+            delete: Fjern denne ctsm home permanent
+      ctsm_homes:
+        show:
+          other: Andre Ctsm Homes
+  activerecord:
+    attributes:
+      'refinery/ctsm_homes/ctsm_home':
+        title: Title
+        description: Description
+        picture: Picture

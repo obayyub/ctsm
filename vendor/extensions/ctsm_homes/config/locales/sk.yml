@@ -1,0 +1,29 @@
+sk:
+  refinery:
+    plugins:
+      ctsm_homes:
+        title: Ctsm Homes
+    ctsm_homes:
+      admin:
+        ctsm_homes:
+          actions:
+            create_new: Pridať Ctsm Home
+            reorder: Preusporiadať Ctsm Homes
+            reorder_done: Koniec radenia Ctsm Homes
+          records:
+            title: Ctsm Homes
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Ctsm Homes. Kliknite na "Pridať Ctsm Home" pre pridanie prvého ctsm home.
+          ctsm_home:
+            view_live_html: Zobraziť náhľad ctsm home<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť ctsm home
+            delete: Zmazať ctsm home
+      ctsm_homes:
+        show:
+          other: Daľšie Ctsm Homes
+  activerecord:
+    attributes:
+      'refinery/ctsm_homes/ctsm_home':
+        title: Title
+        description: Description
+        picture: Picture

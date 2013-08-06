@@ -1,0 +1,29 @@
+nl:
+  refinery:
+    plugins:
+      ctsm_homes:
+        title: Ctsm Homes
+    ctsm_homes:
+      admin:
+        ctsm_homes:
+          actions:
+            create_new: Maak een nieuwe Ctsm Home
+            reorder: Wijzig de volgorde van de Ctsm Homes
+            reorder_done: Klaar met het wijzingen van de volgorde van de Ctsm Homes
+          records:
+            title: Ctsm Homes
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Ctsm Homes. Druk op 'Maak een nieuwe Ctsm Home' om de eerste aan te maken.
+          ctsm_home:
+            view_live_html: Bekijk deze ctsm home op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze ctsm home
+            delete: Verwijder deze ctsm home voor eeuwig
+      ctsm_homes:
+        show:
+          other: Andere Ctsm Homes
+  activerecord:
+    attributes:
+      'refinery/ctsm_homes/ctsm_home':
+        title: Title
+        description: Description
+        picture: Picture

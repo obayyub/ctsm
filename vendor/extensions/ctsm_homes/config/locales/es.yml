@@ -1,0 +1,30 @@
+es:
+  refinery:
+    plugins:
+      ctsm_homes:
+        title: Ctsm Homes
+#        article: masculino/femenino
+    ctsm_homes:
+      admin:
+        ctsm_homes:
+          actions:
+            create_new: Crear nuevo ctsm home
+            reorder: Reordenar ctsm homes
+            reorder_done: Reordenación de ctsm homes completada
+          records:
+            title: Ctsm Homes
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay ctsm homes todavía. Pulsa en "Crear nuevo Ctsm Home" para crear tu primer ctsm home.
+          ctsm_home:
+            view_live_html: Ver este ctsm home como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este ctsm home
+            delete: Borrar este ctsm home para siempre
+      ctsm_homes:
+        show:
+          other: Otros ctsm homes
+  activerecord:
+    attributes:
+      'refinery/ctsm_homes/ctsm_home':
+        title: Title
+        description: Description
+        picture: Picture

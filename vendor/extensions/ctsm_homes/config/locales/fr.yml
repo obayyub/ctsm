@@ -1,0 +1,29 @@
+fr:
+  refinery:
+    plugins:
+      ctsm_homes:
+        title: Ctsm Homes
+    ctsm_homes:
+      admin:
+        ctsm_homes:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Ctsm Home
+            reorder: Réordonner les Ctsm Homes
+            reorder_done: Fin de réordonnancement des Ctsm Homes
+          records:
+            title: Ctsm Homes
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Ctsm Home. Cliquer sur "Créer un(e) nouve(au/l/lle) Ctsm Home" pour créer votre premi(er/ère) ctsm home.'
+          ctsm_home:
+            view_live_html: Voir ce(t/tte) ctsm home <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) ctsm home
+            delete: Supprimer définitivement ce(t/tte) ctsm home
+      ctsm_homes:
+        show:
+          other: Autres Ctsm Homes
+  activerecord:
+    attributes:
+      'refinery/ctsm_homes/ctsm_home':
+        title: Title
+        description: Description
+        picture: Picture

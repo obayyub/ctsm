@@ -1,0 +1,20 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(ctsm_home) -%>">
+  <span class='title'>
+    <%= ctsm_home.title %>
+
+  </span>
+  <span class='actions'>
+    
+    <%= link_to refinery_icon_tag("application_go.png"), refinery.ctsm_homes_ctsm_home_path(ctsm_home),
+        :title => t('.view_live_html'),
+        :target => "_blank" %>
+    
+    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_ctsm_homes_admin_ctsm_home_path(ctsm_home),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), refinery.ctsm_homes_admin_ctsm_home_path(ctsm_home),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => ctsm_home.title),
+        :method => :delete %>
+  </span>
+</li>
