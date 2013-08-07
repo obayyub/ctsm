@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      visitors:
+        title: Visitors
+    visitors:
+      admin:
+        visitors:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Visitor
+            reorder: Réordonner les Visitors
+            reorder_done: Fin de réordonnancement des Visitors
+          records:
+            title: Visitors
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Visitor. Cliquer sur "Créer un(e) nouve(au/l/lle) Visitor" pour créer votre premi(er/ère) visitor.'
+          visitor:
+            view_live_html: Voir ce(t/tte) visitor <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) visitor
+            delete: Supprimer définitivement ce(t/tte) visitor
+      visitors:
+        show:
+          other: Autres Visitors
+  activerecord:
+    attributes:
+      'refinery/visitors/visitor':
+        parking: Parking
+        other: Other

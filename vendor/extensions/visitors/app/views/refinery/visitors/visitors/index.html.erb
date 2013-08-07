@@ -1,0 +1,51 @@
+
+ <style type="text/css">
+      #map-canvas { height: 400px; width: 600px; }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCugKnYuw75qGCmx7ANgZWjd03-WVhmxKU&sensor=false">
+    </script>
+<script>
+	var directionsDisplay;
+	var directionsService = new google.maps.DirectionsService();
+	var map;
+
+	function initialize() {
+	  directionsDisplay = new google.maps.DirectionsRenderer();
+	  var ctsm = new google.maps.LatLng(38.989340376458,-76.937994615934);
+	  var mapOptions = {
+	    zoom:18,
+	    mapTypeId: google.maps.MapTypeId.ROADMAP,
+	    center: ctsm
+	  }
+	  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+	  directionsDisplay.setMap(map);
+	}
+
+	function calcRoute() {
+	  var start = document.getElementById('start').value;
+	  var end = 'college park, md';
+	  var request = {
+	      origin:start,
+	      destination:end,
+	      travelMode: google.maps.DirectionsTravelMode.DRIVING
+	  };
+	  directionsService.route(request, function(response, status) {
+	    if (status == google.maps.DirectionsStatus.OK) {
+	      directionsDisplay.setDirections(response);
+	    }
+	  });
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+<div id="panel">
+	<b>Start: </b>
+	<input type='text' id='start' />
+	<b>End: </b>
+	<span>CTSM</span>
+	<button onclick='calcRoute()'>Go</button>
+</div>
+<div id="map-canvas"></div>

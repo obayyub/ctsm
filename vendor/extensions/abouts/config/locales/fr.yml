@@ -1,0 +1,28 @@
+fr:
+  refinery:
+    plugins:
+      abouts:
+        title: Abouts
+    abouts:
+      admin:
+        abouts:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) About
+            reorder: Réordonner les Abouts
+            reorder_done: Fin de réordonnancement des Abouts
+          records:
+            title: Abouts
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) About. Cliquer sur "Créer un(e) nouve(au/l/lle) About" pour créer votre premi(er/ère) about.'
+          about:
+            view_live_html: Voir ce(t/tte) about <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) about
+            delete: Supprimer définitivement ce(t/tte) about
+      abouts:
+        show:
+          other: Autres Abouts
+  activerecord:
+    attributes:
+      'refinery/abouts/about':
+        title: Title
+        content: Content

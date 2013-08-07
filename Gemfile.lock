@@ -46,6 +46,8 @@ GIT
 PATH
   remote: vendor/extensions
   specs:
+    refinerycms-abouts (1.0)
+      refinerycms-core (~> 2.0.10)
     refinerycms-articles (1.0)
       refinerycms-core (~> 2.0.10)
     refinerycms-courses (1.0)
@@ -57,6 +59,8 @@ PATH
     refinerycms-projects (1.0)
       refinerycms-core (~> 2.0.10)
     refinerycms-publications (1.0)
+      refinerycms-core (~> 2.0.10)
+    refinerycms-visitors (1.0)
       refinerycms-core (~> 2.0.10)
 
 GEM
@@ -241,6 +245,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.13)
   refinerycms (~> 2.0.0)!
+  refinerycms-abouts!
   refinerycms-articles!
   refinerycms-courses!
   refinerycms-ctsm_homes!
@@ -249,6 +254,7 @@ DEPENDENCIES
   refinerycms-projects!
   refinerycms-publications!
   refinerycms-search (~> 2.0.0)
+  refinerycms-visitors!
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

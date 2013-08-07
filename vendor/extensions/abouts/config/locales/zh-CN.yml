@@ -1,0 +1,30 @@
+zh-CN:
+  refinery:
+    plugins:
+      abouts:
+        title: Abouts
+    abouts:
+      admin:
+        abouts:
+          actions:
+            create_new: 建立新的 About
+            reorder: 对 Abouts 重新排序
+            reorder_done: 对 Abouts 的重新排序结束
+          records:
+            title: Abouts
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Abouts yet. Click "Add New About" to add your first about.
+            no_items_yet: 目前没有 Abouts . 点击 "Add New About" 创建一个about.
+          about:
+            view_live_html: 查看 about 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 about
+            delete: 永久删除 about
+      abouts:
+        show:
+          other: 其他 Abouts
+  activerecord:
+    attributes:
+      'refinery/abouts/about':
+        title: Title
+        content: Content

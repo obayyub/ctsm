@@ -1,0 +1,28 @@
+nb:
+  refinery:
+    plugins:
+      visitors:
+        title: Visitors
+    visitors:
+      admin:
+        visitors:
+          actions:
+            create_new: Lag en ny Visitor
+            reorder: Endre rekkefølgen på Visitors
+            reorder_done: Ferdig å endre rekkefølgen Visitors
+          records:
+            title: Visitors
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Visitors enda. Klikk på "Lag en ny Visitor" for å legge til din første visitor.
+          visitor:
+            view_live_html: Vis hvordan denne visitor ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne visitor
+            delete: Fjern denne visitor permanent
+      visitors:
+        show:
+          other: Andre Visitors
+  activerecord:
+    attributes:
+      'refinery/visitors/visitor':
+        parking: Parking
+        other: Other

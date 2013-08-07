@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      visitors:
+        title: Visitors
+    visitors:
+      admin:
+        visitors:
+          actions:
+            create_new: Add New Visitor
+            reorder: Reorder Visitors
+            reorder_done: Done Reordering Visitors
+          records:
+            title: Visitors
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Visitors yet. Click "Add New Visitor" to add your first visitor.
+          visitor:
+            view_live_html: View this visitor live <br/><em>(opens in a new window)</em>
+            edit: Edit this visitor
+            delete: Remove this visitor forever
+      visitors:
+        show:
+          other: Other Visitors
+  activerecord:
+    attributes:
+      'refinery/visitors/visitor':
+        parking: Parking
+        other: Other
