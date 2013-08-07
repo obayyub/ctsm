@@ -5,7 +5,7 @@
 <body ng-app='ctsm'>
     <div class="container">
 
-        <%= site_bar -%>
+
         <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 
         <%= render '/refinery/header' -%>
@@ -19,7 +19,7 @@
         <%= render '/refinery/footer' -%>
 
         <%= render '/refinery/javascripts' %>
-
+        <%= site_bar -%>
     </div>
 
 </body>
