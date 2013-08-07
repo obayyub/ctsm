@@ -6,11 +6,8 @@
     css = [(css || 'menu clearfix')].flatten.join(' ')
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
-<div class="pure-g-r">
-<div class="pure-u-1">
 
-<div class="pure-menu pure-menu-open pure-menu-horizontal">
-  <ul>
+  <ul class="nav nav-pills ctsm-menu">
     <%= render :partial => '/refinery/menu_branch', :collection => roots,
                :locals => {
                  :hide_children => hide_children,
@@ -18,8 +15,6 @@
                  :menu_levels => local_assigns[:menu_levels],
                  :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                } -%>
-</div>
+  </ul>
 <% end -%>
 
-</div>
-</div>

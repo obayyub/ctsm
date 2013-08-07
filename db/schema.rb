@@ -30,15 +30,6 @@ ActiveRecord::Schema.define(:version => 20130807124918) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "refinery_carousels", :force => true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.integer  "picture_id"
-    t.integer  "position"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "refinery_courses", :force => true do |t|
     t.string   "title"
     t.string   "content"

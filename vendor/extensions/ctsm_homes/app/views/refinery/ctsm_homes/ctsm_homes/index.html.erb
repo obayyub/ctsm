@@ -1,60 +1,25 @@
-<style>
-#slider-code { height: 245px; overflow:hidden; }
-#slider-code .viewport { float: left; width: 640px; height: 225px; overflow: hidden; position: relative; }
-#slider-code .buttons { display: block; margin: 30px 10px 0 0; float: left; }
-#slider-code .next { margin: 30px 0 0 10px;  }
-#slider-code .disable { visibility: hidden; }
-#slider-code .overview { list-style: none; padding: 0; margin: 0;  position: absolute; left: 0; top: 0; }
-#slider-code .overview li{ float: left; margin: 0 20px 0 0; padding: 1px; height: 221px; border: 1px solid #dcdcdc; width: 636px;}
+<div class="row">
 
-#slider-code .pager { overflow:hidden; list-style: none; clear: both; margin: 0 0 0 45px; }
-#slider-code .pager li { float: left; }
-#slider-code .pagenum { background-color: #fff; text-decoration: none; text-align: center; padding: 5px; color: #555555; font-size: 14px; font-weight: bold; display: block; }
-#slider-code .active { color: #fff; background-color:  #555555; }
-a:link {font-size: 40px; color: #555555;}
-a:visited {font-size: 40px; color: #555555;}
-</style>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-<div class='pure-g-r'>
-	<div class='pure-u-3-4'>
-    <div ng-controller='ArticlesCtrl'>
-    	<div class='ctsmpage'>
-	    	<div id="slider-code">
-					<a class="buttons prev icon-chevron-sign-left" href="#"></a>
-						<div class="viewport">
-							<ul class="overview">
-								<% @ctsm_homes.each do |c| %>
-								<center>
-				      		<li>
-				        		<%= image_fu c.picture, nil %>
-				      		</li>
-				      		</center>
-				    		<% end %>
-				      </ul>
-						</div>
-					<a class="buttons next icon-chevron-sign-right" href="#"></a>
-					<ul class="pager">
-						<% @ctsm_homes.each do |c| %>
-        			<li><a rel="<%= c.id-1 %>" class="pagenum" href="#"><%= c.id %></a></li>
-        		<% end %>
-    			</ul>
-				</div>
-				<h1>CTSM News</h1>
-	    	<div ng-repeat='article in articles'>
-	    		<div class='ctsmnews'><a href='{{article.link}}'>{{article.title}}</a></div>
-	    		<div ng-bind-html-unsafe="article.content"></div>
-	    		<div class="share-buttons"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ctsmtest.com" data-text="ctsmtesttitle" data-via="marcus_orochena">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div><hr>
-	    	</div>
-	    </div>
-	</div>
-	</div>
-	<div ng-controller='FeedCtrl' class='pure-u-1-4'>
-	  <div class="ctsmfeed">
-			<h3>Engineering News</h3>
-			<div ng-repeat='feed in feeds'>
-				<a href='{{feed.link}}'>{{feed.title}}</a><hr>
+<div class="col-lg-9" ng-controller='ArticlesCtrl'>
+		<h3>CTSM News</h3>
+		<div ng-repeat='article in articles'>
+			<div class='ctsmnews'>
+				<a href='{{article.link}}'>{{article.title}}</a>
 			</div>
+			<div ng-bind-html-unsafe="article.content">
+			</div>
+			<div class="share-buttons">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ctsmtest.com" data-text="ctsmtesttitle" data-via="marcus_orochena">Tweet</a>
+				<%= render 'refinery/ctsm_homes/ctsm_homes/tweetscript' %>
+			</div>
+			<hr>
 		</div>
 	</div>
+
+<div class="col-lg-3 ctsm-engineering-news" ng-controller='FeedCtrl'>
+	<h4>Engineering News</h4>
+	<div ng-repeat='feed in feeds'>
+		<a href='{{feed.link}}'>{{feed.title}}</a><hr>
+	</div>
+</div>
 </div>

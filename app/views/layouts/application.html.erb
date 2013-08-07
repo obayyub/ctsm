@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <%= render '/refinery/head' %>
-  <body ng-app='ctsm'>
-  <div class="pure-g-r">
-  <div class="pure-u-1">
-  <div class="ctsmsite">
+<% site_bar = render('/refinery/site_bar', :head => true) -%>
+<%= render '/refinery/head' %>
+<body ng-app='ctsm'>
+    <div class="container">
 
 
-    <%= site_bar -%>
-    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
-      <header id="header">
+        <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+
         <%= render '/refinery/header' -%>
-      </header>
-      <section id="page">
-        <%= yield %>
-      </section>
-      <footer>
+
+        <div class="row ctsm-content">
+        <div class="col-lg-12">
+          <%= yield %>
+          </div>
+        </div>
+
         <%= render '/refinery/footer' -%>
-      </footer>
-    </div>
-    <%= render '/refinery/javascripts' %>
-    <script type="text/javascript">
-      $(document).ready(function(){
 
-          $('#slider-code').tinycarousel({ pager: true, interval: true  });
-
-      });
-    </script>
-      </div>
+        <%= render '/refinery/javascripts' %>
+        <%= site_bar -%>
     </div>
-      </div>
-  </body>
+
+</body>
 </html>
