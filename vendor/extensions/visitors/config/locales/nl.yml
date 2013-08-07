@@ -1,0 +1,28 @@
+nl:
+  refinery:
+    plugins:
+      visitors:
+        title: Visitors
+    visitors:
+      admin:
+        visitors:
+          actions:
+            create_new: Maak een nieuwe Visitor
+            reorder: Wijzig de volgorde van de Visitors
+            reorder_done: Klaar met het wijzingen van de volgorde van de Visitors
+          records:
+            title: Visitors
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Visitors. Druk op 'Maak een nieuwe Visitor' om de eerste aan te maken.
+          visitor:
+            view_live_html: Bekijk deze visitor op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze visitor
+            delete: Verwijder deze visitor voor eeuwig
+      visitors:
+        show:
+          other: Andere Visitors
+  activerecord:
+    attributes:
+      'refinery/visitors/visitor':
+        parking: Parking
+        other: Other

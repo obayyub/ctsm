@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      abouts:
+        title: Abouts
+#        article: masculino/femenino
+    abouts:
+      admin:
+        abouts:
+          actions:
+            create_new: Crear nuevo about
+            reorder: Reordenar abouts
+            reorder_done: Reordenación de abouts completada
+          records:
+            title: Abouts
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay abouts todavía. Pulsa en "Crear nuevo About" para crear tu primer about.
+          about:
+            view_live_html: Ver este about como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este about
+            delete: Borrar este about para siempre
+      abouts:
+        show:
+          other: Otros abouts
+  activerecord:
+    attributes:
+      'refinery/abouts/about':
+        title: Title
+        content: Content

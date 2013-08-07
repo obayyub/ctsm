@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Visitors::Admin::VisitorsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.visitors_admin_visitors_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_visitors_admin_visitor_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Visitors::Admin::VisitorsController.sortable? && ::Refinery::Visitors::Visitor.any? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Visitors"),
+                 refinery.visitors_admin_visitors_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Visitors"),
+                 refinery.visitors_admin_visitors_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

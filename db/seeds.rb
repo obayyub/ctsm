@@ -29,3 +29,9 @@ Refinery::Search::Engine.load_seed
 
 # Added by Refinery CMS Ctsm Homes extension
 Refinery::CtsmHomes::Engine.load_seed
+
+# Added by Refinery CMS Visitors extension
+Refinery::Visitors::Engine.load_seed
+
+# Added by Refinery CMS Abouts extension
+Refinery::Abouts::Engine.load_seed

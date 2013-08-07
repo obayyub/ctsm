@@ -1,0 +1,29 @@
+es:
+  refinery:
+    plugins:
+      visitors:
+        title: Visitors
+#        article: masculino/femenino
+    visitors:
+      admin:
+        visitors:
+          actions:
+            create_new: Crear nuevo visitor
+            reorder: Reordenar visitors
+            reorder_done: Reordenación de visitors completada
+          records:
+            title: Visitors
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay visitors todavía. Pulsa en "Crear nuevo Visitor" para crear tu primer visitor.
+          visitor:
+            view_live_html: Ver este visitor como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este visitor
+            delete: Borrar este visitor para siempre
+      visitors:
+        show:
+          other: Otros visitors
+  activerecord:
+    attributes:
+      'refinery/visitors/visitor':
+        parking: Parking
+        other: Other

@@ -1,0 +1,28 @@
+en:
+  refinery:
+    plugins:
+      abouts:
+        title: Abouts
+    abouts:
+      admin:
+        abouts:
+          actions:
+            create_new: Add New About
+            reorder: Reorder Abouts
+            reorder_done: Done Reordering Abouts
+          records:
+            title: Abouts
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Abouts yet. Click "Add New About" to add your first about.
+          about:
+            view_live_html: View this about live <br/><em>(opens in a new window)</em>
+            edit: Edit this about
+            delete: Remove this about forever
+      abouts:
+        show:
+          other: Other Abouts
+  activerecord:
+    attributes:
+      'refinery/abouts/about':
+        title: Title
+        content: Content

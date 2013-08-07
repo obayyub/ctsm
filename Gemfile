@@ -66,3 +66,5 @@ gem 'refinerycms-publications', :path => 'vendor/extensions'
 
 gem 'refinerycms-search', '~> 2.0.0'
 gem 'refinerycms-ctsm_homes', :path => 'vendor/extensions'
+gem 'refinerycms-visitors', :path => 'vendor/extensions'
+gem 'refinerycms-abouts', :path => 'vendor/extensions'
