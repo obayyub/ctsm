@@ -1,12 +1,11 @@
-<div class='pure-g-r'>
-	<div class='pure-u-1-5'>
-	</div>
-	<div class='pure-u-2-3'>
+<div class='row'>
+  <div class='col-lg-1'></div>
+  <div class='col-lg-10'>
 	<h1>People</h1>
-	<h1>Directors</h1>
-	<div class='pure-g-r'>
+	<h2>Directors</h2>
+	<div class='row'>
   <% @directors.each do |person| %>
-  		<div class='pure-u-1-5'>
+  		<div class='col-lg-2'>
 	     	<div><%= image_fu person.photo, '100x' %></div>
 	      <div><%= person.name %></div>
 	      <div><%= person.title %></div>
@@ -15,10 +14,10 @@
       </div>
   <% end %>
   </div>
-  <h1>Associates</h1>
-  <div class='pure-g-r'>
+  <h2>Associates</h2>
+  <div class='row'>
   <% @associates.each do |person| %>
-    <div class='pure-u-1-5'>
+    <div class='col-lg-2'>
 	     	<div><%= image_fu person.photo, '100x' %></div>
 	      <div><%= person.name %></div>
 	      <div><%= person.title %></div>
@@ -27,10 +26,10 @@
       </div>
   <% end %>
   </div>
-  <h1>Graduate Students</h1>
-  <div class='pure-g-r'>
+  <h2>Graduate Students</h2>
+  <div class='row'>
   <% @graduates.each do |person| %>
-    <div class='pure-u-1-5'>
+    <div class='col-lg-2'>
 	     	<div><%= image_fu person.photo, '100x' %></div>
 	      <div><%= person.name %></div>
 	      <div><%= person.title %></div>
@@ -39,10 +38,10 @@
       </div>
   <% end %>
   </div>
-  <h1>Undergraduate Students</h1>
-  <div class='pure-g-r'>
+  <h2>Undergraduate Students</h2>
+  <div class='row'>
   <% @undergraduates.each do |person| %>
-    <div class='pure-u-1-5'>
+    <div class='col-lg-2'>
 	     	<div><%= image_fu person.photo, '100x' %></div>
 	      <div><%= person.name %></div>
 	      <div><%= person.title %></div>
@@ -52,7 +51,6 @@
   <% end %>
   </div>
   </div>
-  <div class='pure-u-1-5'>
-  </div>
+  <div class='col-lg-1'></div>
 </div>
 

@@ -1,73 +1,73 @@
-<div class='pure-g-r' ng-controller='PublicationCtrl'>
-	<div class='pure-u-1-5'>
+<div class='row' ng-controller='PublicationCtrl'>
+	<div class='col-lg-1'>
 	</div>
-	<div class='pure-u-2-3' ng-switch on='selection'>
-	<div class="pure-menu pure-menu-open pure-menu-horizontal">
-    <ul>
-        <li ng-click="switchView('journal')"><a href='#'>Journals</a></li>
-        <li ng-click="switchView('conference')"><a href='#'>Conferences</a></li>
-        <li ng-click="switchView('textbooks')"><a href='#'>Textbooks</a></li>
-        <li ng-click="switchView('reports')"><a href='#'>Technical Reports</a></li>
-    </ul>
-	</div>
-	<div class='pure-g-r' ng-switch-when='journal'>
-	<h1>Journal Articles</h1>
+	<div class='col-lg-10' ng-switch on='selection'>
+    <button class='btn btn-default btn-sm' ng-click="switchView('journal')">Journals</button>
+    <button class='btn btn-default btn-sm' ng-click="switchView('conference')">Conferences</button>
+    <button class='btn btn-default btn-sm' ng-click="switchView('textbooks')">Textbooks</button>
+    <button class='btn btn-default btn-sm' ng-click="switchView('reports')">Technical Reports</button>
+	<div ng-switch-when='journal'>
+	<h2>Journal Articles</h2>
   <% @journals.each do |pub| %>
-  		<div class='pure-u-2-3'>
+  		<div>
 	     	<div><%= image_fu pub.picture, '100x' %></div>
 	      <div><%= pub.authors %></div>
 	      <div><%= pub.title %></div>
-	      <div><%= pub.content %></div>
+	      <div><%= pub.content %>
 	      <% if pub.pdf.present? %>
-        	<%= link_to 'pdf', pub.pdf.url %>
-      	<% end %>
+        	<%= link_to 'PDF', pub.pdf.url %>
+      	<% end %></div>
+        <hr>
       </div>
   <% end %>
   </div>
-	<div class='pure-g-r' ng-switch-when='conference'>
-	<h1>Conferences</h1>
+	<div ng-switch-when='conference'>
+	<h2>Conferences</h2>
   <% @conferences.each do |pub| %>
-  		<div class='pure-u-2-3'>
+  		<div>
 	     	<div><%= image_fu pub.picture, '100x' %></div>
 	      <div><%= pub.authors %></div>
 	      <div><%= pub.title %></div>
-	      <div><%= pub.content %></div>
+	      <div><%= pub.content %>
 	      <% if pub.pdf.present? %>
-        	<%= link_to 'pdf', pub.pdf.url %>
-      	<% end %>
+        	<%= link_to 'PDF', pub.pdf.url %>
+      	<% end %></div>
+        <hr>
       </div>
   <% end %>
   </div>
-	<div class='pure-g-r' ng-switch-when='textbooks'>
-	<h1>Textbooks</h1>
+	<div ng-switch-when='textbooks'>
+	<h2>Textbooks</h2>
   <% @textbooks.each do |pub| %>
-  		<div class='pure-u-2-3'>
+  		<div>
 	     	<div><%= image_fu pub.picture, '100x' %></div>
 	      <div><%= pub.authors %></div>
 	      <div><%= pub.title %></div>
-	      <div><%= pub.content %></div>
+	      <div><%= pub.content %>
 	      <% if pub.pdf.present? %>
-        	<%= link_to 'pdf', pub.pdf.url %>
-      	<% end %>
+        	<%= link_to 'PDF', pub.pdf.url %>
+      	<% end %></div>
+        <hr>
       </div>
   <% end %>
   </div>
-	<div class='pure-g-r' ng-switch-when='reports'>
-	<h1>Technical Reports</h1>
+	<div ng-switch-when='reports'>
+	<h2>Technical Reports</h2>
   <% @reports.each do |pub| %>
-  		<div class='pure-u-2-3'>
+  		<div>
 	     	<div><%= image_fu pub.picture, '100x' %></div>
 	      <div><%= pub.authors %></div>
 	      <div><%= pub.title %></div>
-	      <div><%= pub.content %></div>
+	      <div><%= pub.content %>
 	      <% if pub.pdf.present? %>
-        	<%= link_to 'pdf', pub.pdf.url %>
-      	<% end %>
+        	<%= link_to 'PDF', pub.pdf.url %>
+      	<% end %></div>
+        <hr>
       </div>
   <% end %>
   </div>
   </div>
-  <div class='pure-u-1-5'>
+  <div class='col-lg-1'>
   </div>
 </div>
 

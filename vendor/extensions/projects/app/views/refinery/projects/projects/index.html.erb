@@ -1,18 +1,21 @@
 <% if @projects.exists? %>
-
-<div ng-switch on='select' ng-init="select = '<%= @projects.first.title %>'">
-	<div class="pure-menu pure-menu-open pure-menu-horizontal">
-		<% @projects.each do |f| %>
-			<ul>
-				<li ng-click="select = '<%= f.title.to_s %>'"><a href='#'><%= f.title%></a></li>
-			</ul>
+<div class='row'>
+<div class='col-lg-1'></div>
+<div class='col-lg-10'>
+	<div ng-switch on='select' ng-init="select = '<%= @projects.first.title %>'">
+		<div>
+			<% @projects.each do |f| %>
+				<button class='btn btn-default btn-sm' ng-click="select = '<%= f.title.to_s %>'"><%= f.title%></button>
+			<% end %>
+		</div>
+		<% @projects.each do |project| %>
+		  <div ng-switch-when='<%= project.title.to_s %>'>
+		  	<h3><%= project.title %></h3>
+		  	<%=raw project.content %>
+		  </div>
 		<% end %>
 	</div>
-	<% @projects.each do |project| %>
-	  <div ng-switch-when='<%= project.title.to_s %>'>
-	  	<%= project.title %>
-	  	<%=raw project.content %>
-	  </div>
-	<% end %>
+</div>
+<div class='col-lg-1'></div>
 </div>
 <% end %>

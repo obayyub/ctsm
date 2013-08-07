@@ -1,13 +1,14 @@
-<div class='pure-g-r'>
-	<div class='pure-u-1-5'>
+<div class='row'>
+	<div class='col-lg-1'>
 	</div>
-	<div class='pure-u-2-3'>
+	<div class='col-lg-10'>
 		<h1>Courses</h1>
 		<% @courses.each do |course| %>
 			<div><%= link_to course.title, course.link %></div>
 			<div><%= course.content %></div>
+			<hr>
 		<% end %>
 	</div>
-	<div class='pure-u-1-5'>
+	<div class='col-lg-1'>
 	</div>
 </div>

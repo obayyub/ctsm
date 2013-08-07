@@ -30,6 +30,10 @@ body {
     font-size: 0.9em;
     margin-top: 3px;
   }
+
+  a:hover {
+    color: #001B75
+  }
 }
 
 .ctsm-content {
@@ -64,3 +68,6 @@ body {
   font-size: 0.9em;
 }
 
+.ctsm-arrow {
+  color: #000;
+}
