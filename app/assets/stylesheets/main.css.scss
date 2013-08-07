@@ -1,109 +1,66 @@
-@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);
-
 body {
-  background: #ccc;
-font-family: 'Arimo', sans-serif;
-
+  background: #cccccc;
 }
-
-.ctsmsite {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.ctsmheader {
+.ctsm-header {
   background: image-url('naval_ship.png') right bottom no-repeat, image-url("header-pattern.jpg");
-  padding-bottom: 1em;
-}
-
-.ctsmheader img {
-  margin: 1em;
-  margin-bottom: 0;
-}
-
-.pure-menu.pure-menu-open.pure-menu-horizontal {
-background: rgb(27,89,128); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(27,89,128,1) 0%, rgba(3,65,102,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,89,128,1)), color-stop(100%,rgba(3,65,102,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b5980', endColorstr='#034166',GradientType=0 ); /* IE6-9 */
-
-}
-
-.pure-menu.pure-menu-open.pure-menu-horizontal a {
-  color: #fff;
-  font-size: .8em;
-  margin-top: 3px;
- }
-
-.pure-menu.pure-menu-open.pure-menu-horizontal a:hover {
-  background: #22a7f2;
-  border-radius: 5px;
-}
-
-.footerbackground {
-  background: #206898;
-}
-
-.ctsmfooter {
-  background: #206898;
-  padding-bottom: 3em;
-  padding-top: 3em;
-  color: #fff;
-  line-height: .3em;
-  font-size: 0.8em;
-  font-family: 'Franklin Gothic Medium', sans-serif;
-  font-weight: 400;
-}
-
-.ctsmfeed a:link {
-  color: #555;
-  text-decoration: none;
-  font-size: 1em;
-  font-weight:600;
-}
-
-.ctsmfeed a:visited {
-    color: #555;
-}
-
-.ctsmfeed {
-  margin-left: -0.5em;
-  font-size: 0.8em;
-  margin-right: 1.3em;
-}
-
-.ctsmfeed hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-#page {
-  background: #f6f3ee;
-  margin-top: 0.5em;
+  padding: 1em;
   padding-bottom: 2em;
-  margin-bottom: 0.5em;
+}
+.ctsm-search {
+  margin-top: 1em;
+  width: 20em;
 
+  .form-control {
+    width: 15em;
+  }
 }
 
-.ctsmnews a:link {
-  color: #555;
-  text-decoration: none;
-  font-size: 1.2em;
-  font-weight:600;
+.ctsm-menu {
+  background: rgb(27,89,128); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(27,89,128,1) 0%, rgba(3,65,102,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(27,89,128,1)), color-stop(100%,rgba(3,65,102,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(27,89,128,1) 0%,rgba(3,65,102,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b5980', endColorstr='#034166',GradientType=0 ); /* IE6-9 */
+
+  a {
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 3px;
+  }
 }
 
-.ctsmnews a:visited {
-  color: #555;
+.ctsm-content {
+  background: #f6f3ee;
 }
 
-.ctsmpage {
+.ctsm-engineering-news {
+
+  font-size: 0.8em;
+
+  hr {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  a:link {
+    color: #555;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight:600;
+  }
+
+  a:visited {
+    color: #555;
+  }
+}
+
+.ctsm-footer {
+  background: #206898;
+  color: #fff;
+  padding: 1em;
   font-size: 0.9em;
-  margin-left: 1.3em;
-  margin-right: 1.3em;
 }
+
