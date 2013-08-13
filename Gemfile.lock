@@ -242,6 +242,7 @@ DEPENDENCIES
   fog
   heroku
   jquery-rails (~> 2.0.0)
+  nokogiri
   pg
   rails (= 3.2.13)
   refinerycms (~> 2.0.0)!

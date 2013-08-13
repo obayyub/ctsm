@@ -58,6 +58,8 @@ gem 'fog'
 # Postgres support (added for Heroku)
 gem 'pg'
 
+gem 'nokogiri'
+
 gem 'refinerycms-people', :path => 'vendor/extensions'
 gem 'refinerycms-courses', :path => 'vendor/extensions'
 gem 'refinerycms-projects', :path => 'vendor/extensions'
