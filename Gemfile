@@ -22,7 +22,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'unicorn'
+gem 'puma'
 
 gem 'jquery-rails', '~> 2.0.0'
 
