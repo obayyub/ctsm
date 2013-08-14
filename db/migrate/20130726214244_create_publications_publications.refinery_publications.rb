@@ -4,9 +4,9 @@ class CreatePublicationsPublications < ActiveRecord::Migration
   def up
     create_table :refinery_publications do |t|
       t.string :category
-      t.string :authors
-      t.string :title
-      t.string :content
+      t.text :authors
+      t.text :title
+      t.text :content
       t.integer :pdf_id
       t.integer :picture_id
       t.integer :position
