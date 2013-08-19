@@ -145,9 +145,9 @@ ActiveRecord::Schema.define(:version => 20130807124918) do
 
   create_table "refinery_publications", :force => true do |t|
     t.string   "category"
-    t.string   "authors"
-    t.string   "title"
-    t.string   "content"
+    t.text     "authors"
+    t.text     "title"
+    t.text     "content"
     t.integer  "pdf_id"
     t.integer  "picture_id"
     t.integer  "position"
