@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(:version => 20130807124918) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "refinery_carousels", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.integer  "picture_id"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "refinery_courses", :force => true do |t|
     t.string   "title"
     t.string   "content"
@@ -145,9 +154,9 @@ ActiveRecord::Schema.define(:version => 20130807124918) do
 
   create_table "refinery_publications", :force => true do |t|
     t.string   "category"
-    t.text     "authors"
-    t.text     "title"
-    t.text     "content"
+    t.string   "authors"
+    t.string   "title"
+    t.string   "content"
     t.integer  "pdf_id"
     t.integer  "picture_id"
     t.integer  "position"

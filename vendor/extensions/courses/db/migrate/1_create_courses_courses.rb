@@ -3,7 +3,7 @@ class CreateCoursesCourses < ActiveRecord::Migration
   def up
     create_table :refinery_courses do |t|
       t.string :title
-      t.string :content
+      t.text :content
       t.string :link
       t.integer :position
 
