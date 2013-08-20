@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130807124918) do
+ActiveRecord::Schema.define(:version => 20130820170628) do
 
   create_table "refinery_abouts", :force => true do |t|
     t.string   "title"
@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(:version => 20130807124918) do
 
   create_table "refinery_courses", :force => true do |t|
     t.string   "title"
-    t.string   "content"
     t.string   "link"
     t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "description"
   end
 
   create_table "refinery_ctsm_homes", :force => true do |t|

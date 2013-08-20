@@ -5,7 +5,7 @@
 		<h1>Courses</h1>
 		<% @courses.each do |course| %>
 			<div><%= link_to course.title, course.link %></div>
-			<div><%= course.content %></div>
+			<div><%= course.description %></div>
 			<hr>
 		<% end %>
 	</div>
