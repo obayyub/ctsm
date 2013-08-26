@@ -1,9 +1,6 @@
-<form class="form-inline ctsm-search">
 <%= form_tag refinery.search_path do -%>
   <%= text_field_tag :query, {}, {:type => "search",
-                     :placeholder => "Search",
-                     :class => "form-control",
+                     :placeholder => "Search site for...",
                      :value => (params[:query] if params[:query])} %>
-  <%= submit_tag 'Go', :class => "btn btn-default" %>
+  <%= submit_tag 'Go' %>
 <% end %>
-</form>

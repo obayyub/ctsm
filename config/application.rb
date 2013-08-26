@@ -65,8 +65,17 @@ module Ctsm
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.to_prepare do
-        Refinery.searchable_models = [Refinery::Page]
+      config.to_prepare do
+        Refinery.searchable_models = [
+            Refinery::Page,
+            Refinery::Abouts::About,
+            Refinery::Articles::Article,
+            Refinery::Courses::Course,
+            Refinery::People::Person,
+            Refinery::Projects::Project,
+            Refinery::Publications::Publication
+        ]
     end
+
   end
 end

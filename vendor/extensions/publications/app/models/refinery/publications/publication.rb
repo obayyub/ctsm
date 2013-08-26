@@ -5,7 +5,7 @@ module Refinery
 
       attr_accessible :authors, :category, :title, :content, :pdf_id, :picture_id, :position
 
-      acts_as_indexed :fields => [:authors, :category, :title, :content]
+      acts_as_indexed :fields => [:title, :authors, :category, :content]
 
       validates :title, :presence => true, :uniqueness => true
 
