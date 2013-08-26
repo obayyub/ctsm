@@ -67,7 +67,6 @@ module Ctsm
 
       config.to_prepare do
         Refinery.searchable_models = [
-            Refinery::Page,
             Refinery::Abouts::About,
             Refinery::Articles::Article,
             Refinery::Courses::Course,
